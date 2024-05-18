@@ -8,4 +8,5 @@ add_executable(Project_Euler main.cpp
         problems/problem3.cpp
         problems/problem1.cpp
         problems/problem2.cpp
+        problems/problem4.cpp
 )
