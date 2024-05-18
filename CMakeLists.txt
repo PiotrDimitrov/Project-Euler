@@ -5,8 +5,6 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(Project_Euler main.cpp
         header.h
-        problem1.cpp
-        problem2.cpp
         problems/problem3.cpp
         problems/problem1.cpp
         problems/problem2.cpp
