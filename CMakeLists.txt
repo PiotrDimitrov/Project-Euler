@@ -7,4 +7,5 @@ add_executable(Project_Euler main.cpp
         header.h
         problem1.cpp
         problem2.cpp
+        problems/problem3.cpp
 )
