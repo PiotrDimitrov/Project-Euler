@@ -26,7 +26,6 @@ int problem5() {
         while (i*e < limit){
             i *= e;
         }
-        std::cout << i << std::endl;
         result *= i;
     }
     return result;
