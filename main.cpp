@@ -2,6 +2,6 @@
 #include "header.h"
 
 int main() {
-    std::cout << problem5() << std::endl;
+    std::cout << problem6() << std::endl;
     return 0;
 }
