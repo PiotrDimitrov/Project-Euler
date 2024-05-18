@@ -15,4 +15,3 @@ int problem1() {
     }
     return result;
 }
-
