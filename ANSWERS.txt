@@ -11,7 +11,7 @@ Problem 006: 25164150
 Problem 007: 104743
 Problem 008: 23514624000
 Problem 009: 31875000
-Problem 010:
+Problem 010: 142913828922
 Problem 011:
 Problem 012:
 Problem 013:

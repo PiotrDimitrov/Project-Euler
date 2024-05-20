@@ -3,24 +3,23 @@
 
    Find the sum of all the primes below two million.
 */
-#include <iostream>
 
 long long problem10(){
-    int cap = 2000000;
-    int arr[cap];
+    int cap = 2000001;
+    bool arr[cap];
     for (int i = 0; i < cap; i++){
-        arr[i] = i+1;
+        arr[i] = true;
     }
-
-    for (int i = 1; i*i < cap; i++){
-        if (arr[i] == 0) { continue;}
-        for (int j = 2*i+1; j < cap; j += (i+1)){
-            arr[j] = 0;
+    for (int i = 2; i*i <= cap; i++){
+        if (arr[i]) {
+            for (int j = i*i; j < cap; j+=i){
+                arr[j] = false;
+            }
         }
     }
-
-    for (auto i : arr){
-        std::cout << i << " ";
+    long long sum = 0;
+    for (int i = 2; i < cap; i++){
+        if(arr[i]){sum += i;}
     }
-    return 0;
-}
+    return sum;
+}//142913828922
