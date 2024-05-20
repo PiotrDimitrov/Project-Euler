@@ -9,7 +9,7 @@ int problem1() {
     int cap = 1000;
     int result = 0;
     for (int i = 0; i < cap; i++) {
-        if (i % 3 == 0 || i % 5 == 0) {result += i;}
+        if (i % 3 == 0 || i % 5 == 0) { result += i;}
     }
     return result;
 }
