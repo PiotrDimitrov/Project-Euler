@@ -9,9 +9,7 @@ int problem1() {
     int cap = 1000;
     int result = 0;
     for (int i = 0; i < cap; i++) {
-        if (i % 3 == 0) {result += i;
-            continue;}  // use continue to avoid adding numbers like 15, 30, 45 to result twice
-        if (i % 5 == 0) {result += i;}
+        if (i % 3 == 0 || i % 5 == 0) {result += i;}
     }
     return result;
 }

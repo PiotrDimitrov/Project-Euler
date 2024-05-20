@@ -12,12 +12,11 @@ int problem2(){
     int fib = 1, step = 1;
     int result = 0;
     while (fib < 4000000){
-        if (fib % 2 == 0) {
-            result += fib;
-        }
+        result += fib;
+
         int temp = step;
         step = fib;
         fib = fib + temp;
     }
-    return result;
+    return (result+1)/2;
 }
