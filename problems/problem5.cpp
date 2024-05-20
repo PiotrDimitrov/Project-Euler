@@ -15,7 +15,7 @@ int problem5() {
     }
     for (int i = 1; i < limit; i++){
         if (arr[i] == 0) { continue;}
-        for (int j = 2*arr[i]; j < limit; j += arr[i]){
+        for (int j = arr[i]*arr[i]; j < limit; j += arr[i]){
             arr[j-1] = 0;
         }
     }
