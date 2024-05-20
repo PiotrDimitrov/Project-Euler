@@ -2,7 +2,7 @@
 #include "header.h"
 
 int main() {
-    std::cout << problem10() << std::endl;
+    std::cout << problem6() << std::endl;
 
     return 0;
 }

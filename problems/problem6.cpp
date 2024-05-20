@@ -15,13 +15,20 @@
  */
 
 int problem6 () {
-    int x = 100;
-    int sum1 = 0;
-    int sum2 = 0;
-    for (int i = 1; i <= x; i++){
-        sum1 += i;
-        sum2 += i*i;
-    }
-    sum1 *= sum1;
-    return sum1 - sum2;
+    int n = 100;
+    int sqOfSum = n*(n+1)*n*(n+1)/4;
+    int sumOfSq = n*(n+1)*(2*n+1)/6;
+    return sqOfSum - sumOfSq;
 }
+
+//int problem6 () {
+//    int x = 100;
+//    int sum1 = 0;
+//    int sum2 = 0;
+//    for (int i = 1; i <= x; i++){
+//        sum1 += i;
+//        sum2 += i*i;
+//    }
+//    sum1 *= sum1;
+//    return sum1 - sum2;
+//}
