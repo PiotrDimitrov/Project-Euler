@@ -105,7 +105,6 @@
 */
 #include "../libs/bigNum.h"
 #include <fstream>
-#include <string>
 #include <cmath>
 
 long long problem13(){
