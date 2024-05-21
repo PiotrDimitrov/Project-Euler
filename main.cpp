@@ -1,9 +1,9 @@
 #include <iostream>
 #include "header.h"
-#include "libs/bigNum.h"
+#include "libs/simpleTimer.h"
 
 int main() {
-    std::cout << problem13() << std::endl;
-
+    timer t;
+    std::cout << problem14() << std::endl;
     return 0;
 }

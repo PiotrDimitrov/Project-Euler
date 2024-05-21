@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(Project_Euler main.cpp
         header.h
         libs/bigNum.h
+        libs/simpleTimer.h
         problems/problem3.cpp
         problems/problem1.cpp
         problems/problem2.cpp
@@ -18,6 +19,8 @@ add_executable(Project_Euler main.cpp
         problems/problem10.cpp
         problems/problem11.cpp
         problems/problem12.cpp
-        problems/program13.cpp
+        problems/problem13.cpp
         libs/bigNum.cpp
+        problems/problem14.cpp
+        libs/simpleTimer.cpp
 )

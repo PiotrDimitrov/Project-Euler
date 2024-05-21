@@ -14,5 +14,6 @@ long long problem10();
 long problem11();
 long problem12();
 long long problem13();
+int problem14();
 
 #endif //PROJECT_EULER_HEADER_H
