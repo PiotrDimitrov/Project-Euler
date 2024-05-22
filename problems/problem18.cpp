@@ -82,7 +82,7 @@ int problem18() {
         delete [] triangle[i];
     }
     delete [] triangle;
-    
+
     return result;
 }
 
