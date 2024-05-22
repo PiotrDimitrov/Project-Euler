@@ -26,4 +26,5 @@ add_executable(Project_Euler main.cpp
         problems/problem15.cpp
         problems/problem16.cpp
         problems/problem17.cpp
+        problems/problem18.cpp
 )
