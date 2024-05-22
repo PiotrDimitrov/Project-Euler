@@ -23,4 +23,5 @@ add_executable(Project_Euler main.cpp
         libs/bigNum.cpp
         problems/problem14.cpp
         libs/simpleTimer.cpp
+        problems/problem15.cpp
 )

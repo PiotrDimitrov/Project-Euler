@@ -1,6 +1,8 @@
 #ifndef PROJECT_EULER_HEADER_H
 #define PROJECT_EULER_HEADER_H
 #include "libs/bigNum.h"
+#include <iostream>
+
 int problem1();
 int problem2();
 int problem3();
@@ -15,5 +17,6 @@ long problem11();
 long problem12();
 long long problem13();
 int problem14();
+std::string problem15();
 
 #endif //PROJECT_EULER_HEADER_H
