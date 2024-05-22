@@ -24,4 +24,5 @@ add_executable(Project_Euler main.cpp
         problems/problem14.cpp
         libs/simpleTimer.cpp
         problems/problem15.cpp
+        problems/problem16.cpp
 )

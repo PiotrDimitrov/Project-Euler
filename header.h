@@ -18,5 +18,6 @@ long problem12();
 long long problem13();
 int problem14();
 std::string problem15();
+int problem16();
 
 #endif //PROJECT_EULER_HEADER_H
