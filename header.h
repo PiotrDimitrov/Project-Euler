@@ -21,5 +21,6 @@ std::string problem15();
 int problem16();
 int problem17();
 int problem18();
+int problem19();
 
 #endif //PROJECT_EULER_HEADER_H
