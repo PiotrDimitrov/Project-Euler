@@ -25,8 +25,8 @@ Problem 020: 648
 Problem 021: 31626
 Problem 022: 871198282
 Problem 023: 2783915460
-Problem 024:
-Problem 025:
+Problem 024: 2783915460
+Problem 025: 4782
 Problem 026:
 Problem 027:
 Problem 028:
