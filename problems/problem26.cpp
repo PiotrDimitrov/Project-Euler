@@ -18,7 +18,6 @@
    Find the value of d < 1000 for which ^1/[d] contains the longest recurring
    cycle in its decimal fraction part.
 */
-#include <cmath>
 #include <vector>
 
 bool in(std::vector<int> v, int x){
@@ -28,14 +27,9 @@ bool in(std::vector<int> v, int x){
     return false;
 }
 
-int power(int x){
-    if (x <= 9)  {return 1;}
-    if (x <= 99) {return 2;}
-    if (x <= 999){return 3;}
-}
-
 int problem26() {
     std::vector<int> digits;
+
     int result = 0;
     int max = 0;
     for (int i = 2; i < 1000; i++) {
