@@ -27,7 +27,7 @@ Problem 022: 871198282
 Problem 023: 2783915460
 Problem 024: 2783915460
 Problem 025: 4782
-Problem 026:
+Problem 026: 983
 Problem 027:
 Problem 028:
 Problem 029:
