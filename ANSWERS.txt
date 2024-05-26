@@ -31,4 +31,13 @@ Problem 026: 983
 Problem 027: -59231
 Problem 028: 669171001
 Problem 029: 9183
-Problem 030:
+Problem 030: 443839
+Problem 031:
+Problem 032:
+Problem 033:
+Problem 034:
+Problem 035:
+Problem 036:
+Problem 037:
+Problem 038:
+Problem 039:
