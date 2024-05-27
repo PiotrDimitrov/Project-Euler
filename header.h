@@ -37,5 +37,6 @@ int problem31();
 int problem32();
 int problem33();
 int problem34();
+int problem35();
 
 #endif //PROJECT_EULER_HEADER_H
