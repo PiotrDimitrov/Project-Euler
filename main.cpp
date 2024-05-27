@@ -4,6 +4,6 @@
 
 int main() {
     timer t;
-    std::cout << problem31() << std::endl;
+    std::cout << problem32() << std::endl;
     return 0;
 }
