@@ -29,13 +29,21 @@ namespace pr36{
     }
 
     std::string toBin(int x){
-        
+        std::string result;
+        while (x > 0) {
+            result = char(x%2 + '0') + result;
+            x /= 2;
+        }
+        return result;
     }
 }
 
 int problem36() {
     int result = 0;
-    for (int i = 1; i < 100000; i++){
-
+    for (int i = 1; i < 1000000; i++){
+        if (pr36::isPal(pr36::toStr(i)) && pr36::isPal(pr36::toBin(i))){
+            result += i;
+        }
     }
+    return result;
 }
