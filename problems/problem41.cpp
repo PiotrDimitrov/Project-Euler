@@ -35,9 +35,10 @@ namespace pr41 {
 
 long problem41 () {
     int result = 0;
-    for (long i = 987654321; i > 0; i--){
-        if (i <= result) { continue;}
-        if (pr41::isPrime(i) && pr41::isPandig(i)){result = i;}
+    for (long i = 7654321; i > 0; i--){
+        // it's useless to check 987654321 and 87654321 (and its permutations)
+        // as both pandigitals are divisable by 3 (by sum of digits), thus not prime
+        if (pr41::isPrime(i) && pr41::isPandig(i)){result = i; break;}
     }
     return result;
 }
