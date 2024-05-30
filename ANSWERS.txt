@@ -40,4 +40,14 @@ Problem 035: 55
 Problem 036: 872187
 Problem 037: 748317
 Problem 038: 932718654
-Problem 039:
+Problem 039: 840
+Problem 040:
+Problem 041:
+Problem 042:
+Problem 043:
+Problem 044:
+Problem 045:
+Problem 046:
+Problem 047:
+Problem 048:
+Problem 049:
