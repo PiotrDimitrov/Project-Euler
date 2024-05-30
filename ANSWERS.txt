@@ -42,8 +42,8 @@ Problem 037: 748317
 Problem 038: 932718654
 Problem 039: 840
 Problem 040: 7652413
-Problem 041:
-Problem 042:
+Problem 041: 7652413
+Problem 042: 162
 Problem 043:
 Problem 044:
 Problem 045:
