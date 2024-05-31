@@ -45,5 +45,6 @@ int problem39();
 int problem40();
 long problem41();
 int problem42();
+std::string problem43();
 
 #endif //PROJECT_EULER_HEADER_H
