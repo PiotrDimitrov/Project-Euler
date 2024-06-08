@@ -44,7 +44,7 @@ Problem 039: 840
 Problem 040: 7652413
 Problem 041: 7652413
 Problem 042: 162
-Problem 043:
+Problem 043: 5482660
 Problem 044:
 Problem 045:
 Problem 046:
