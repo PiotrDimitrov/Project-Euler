@@ -11,24 +11,15 @@
    and difference are pentagonal and D = |P[k] − P[j]| is minimised; what is
    the value of D?
  */
+#include <cmath>
 
 namespace pr44{
-    bool isPent(int x){
-
-        int num = 2 * x;
-        for (int i = 1; i * i <= num; i++){
-            if (i * (3*i - 1) == num){
-                return true;
-            }
-        }
-        return false;
+    bool isPentagonal(unsigned long long x)
+    {
+        unsigned long long n = (1 + sqrt(24*x + 1)) / 6;
+        auto p_n = n * (3 * n - 1) / 2;
+        return p_n == x;
     }
-
-    int abs(int x){
-        if (x < 0){return -x;}
-        else return x;
-    }
-
     int pent(int x){
         return x*(3*x-1)/2;
     }
@@ -42,7 +33,8 @@ int problem44() {
         while (first > second){
             int d = pr44::pent(first) - pr44::pent(second);
             int s = pr44::pent(first) + pr44::pent(second);
-            if (pr44::isPent(d) && pr44::isPent(s)){return d;}
+            //if (pr44::isPent(d) && pr44::isPent(s)){return d;}
+            if (pr44::isPentagonal(d) && pr44::isPentagonal(s)){return d;}
             first--; second++;
         }
     }
