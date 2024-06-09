@@ -48,6 +48,6 @@ Problem 043: 16695334890
 Problem 044: 5482660
 Problem 045: 1533776805
 Problem 046: 5777
-Problem 047:
+Problem 047: 134043
 Problem 048:
 Problem 049:
