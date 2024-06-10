@@ -21,9 +21,10 @@ long long problem48() {
 //        result = result + temp;
 //
 //    }
-for (bigNum i("1"); i <= "1000"; i = i + "1"){
-    result = result + i ^ i;
-    std::cout << index++ << std::endl;
+for (int i = 1; i <= 1000; i++){
+    bigNum temp(i);
+    bigNum temp2 = temp ^ temp;
+    result = result + temp2;
 }
     long long res = 0;
     for (int i = 0; i < 10; i++){
