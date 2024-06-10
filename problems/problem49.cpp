@@ -57,5 +57,5 @@ std::string problem49() {
             }
         }
     }
-    return "-1";
+    return "0";
 }
