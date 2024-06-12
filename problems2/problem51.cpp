@@ -77,7 +77,7 @@ int problem51() {
             std::vector<int> number;
             number = pr51::intToVec(vec[i]);
             for (int& e : number){
-                
+
             }
         }
     }

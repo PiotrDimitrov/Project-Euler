@@ -27,6 +27,12 @@ int problem50() {
             vec[j] = 0;
         }
     }
-
-
+    int next = 0, current = 0;
+    for (int i = 2; i < vec.size(); ++i){
+        if (vec[i] == 0){continue;}
+        next += vec[i];
+        if (next > 1000000) {return current;}
+        if (vec[next] != 0) {current = next;}
+    }
+    return -1;
 }
