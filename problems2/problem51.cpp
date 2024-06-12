@@ -16,6 +16,7 @@
 
 #include <vector>
 #include <cmath>
+#include <iostream>
 
 namespace pr51 {
     int hasThree(int x){
@@ -73,12 +74,27 @@ int problem51() {
         if (vec[i] == 0){ continue;}
         int family = 0;
         int index = pr51::hasThree(vec[i]);
-        if (index != -1) {
-            std::vector<int> number;
-            number = pr51::intToVec(vec[i]);
-            for (int& e : number){
 
+        if (index != -1) {
+            std::vector<int> number = pr51::intToVec(vec[i]);
+            std::vector<int> indexes(number.size(), 0);
+            for (int n = 0; n < number.size(); n++){
+                if (number[n] == index){
+                    indexes[n] = 1;
+                }
             }
+            for (int digit = 1; digit <= 9; digit++){
+                for (int i = 0; i < number.size(); i++){
+                    if (indexes[i] == 1) {
+                        number[i] = digit;
+                    }
+                }
+                int temp = pr51::vecToInt(number);
+                if (pr51::isPrime(temp)) { family++;}
+            }
+            if (family == 8) {return vec[i];}
+
         }
     }
+    return -1;
 }

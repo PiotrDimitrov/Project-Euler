@@ -4,7 +4,7 @@
 
 int main() {
     timer t;
-    std::cout << problem50() << std::endl;
+    std::cout << problem51() << std::endl;
     return 0;
 }
 //997651

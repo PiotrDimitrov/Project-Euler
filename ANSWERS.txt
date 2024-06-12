@@ -52,4 +52,12 @@ Problem 047: 134043
 Problem 048: 9110846700
 Problem 049: 296962999629
 Problem 050: 958577 (to do)
-Problem 051:
+Problem 051: 121313
+Problem 052:
+Problem 053:
+Problem 054:
+Problem 055:
+Problem 056:
+Problem 057:
+Problem 058:
+Problem 059:
