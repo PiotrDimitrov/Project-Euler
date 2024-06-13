@@ -55,5 +55,6 @@ std::string problem49();
 int problem50();
 int problem51();
 int problem52();
+int problem53();
 
 #endif //PROJECT_EULER_HEADER_H
