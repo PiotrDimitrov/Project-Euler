@@ -121,127 +121,110 @@ namespace pr54 {
     }
 
     int fourKind(std::string str, std::vector<int> val, std::vector<int> sts){
-        int value[13] = {0,0,0,0,0,0,0,0,0,0,0,0,0};
-        for (int i = 0; i < 13; i+=3){
-            for(int j = 0; j < 13; j++){
-                if (chars[j] == str[i]){value[j]++; break;}
-            }
-        }
         for (int i = 0 ; i < 13; i++){
-            if (value[i] == 4){return 140 + i;}
+            if (val[i] == 4){return 140 + i;}
         }
         return -1;
     }
 
     int fullHouse(std::string str, std::vector<int> val, std::vector<int> sts){
-        int value[13] = {0,0,0,0,0,0,0,0,0,0,0,0,0};
-        for (int i = 0; i < 13; i+=3){
-            for(int j = 0; j < 13; j++){
-                if (chars[j] == str[i]){value[j]++; break;}
-            }
-        }
         bool flag1 = false, flag2 = false; int add = -1;
         for (int i = 0; i < 13; i++){
-            if (value[i] > 0 && add < i) {add = i;}
-            if (value[i] == 2) {flag1 = true;}
-            if (value[i] == 3) {flag2 = true;}
+            if (val[i] > 0 && add < i) {add = i;}
+            if (val[i] == 2) {flag1 = true;}
+            if (val[i] == 3) {flag2 = true;}
         }
         if (flag1 && flag2) {return 120 + add;}
         else {return -1;}
     }
 
     int flush(std::string str, std::vector<int> val, std::vector<int> sts){
-        for (int i = 4; i <= 13; i+=3){
-            if (str[i] != str[i-3]){return -1;}
-        }
-        int value[13] = {0,0,0,0,0,0,0,0,0,0,0,0,0};
-        for (int i = 0; i < 13; i+=3){
-            for(int j = 0; j < 13; j++){
-                if (chars[j] == str[i]){value[j]++; break;}
-            }
+        for (int e : sts){
+            if (e != 0 && e != 5){return -1;}
         }
         int add = -1;
         for (int i = 0; i < 13; i++){
-            if (value[i] > 0 && add < i) {add = i;}
+            if (val[i] > 0 && add < i) {add = i;}
         }
         return 100 + add;
     }
 
     int straight(std::string str, std::vector<int> val, std::vector<int> sts){
-        int value[13] = {0,0,0,0,0,0,0,0,0,0,0,0,0};
-        for (int i = 0; i < 13; i+=3){
-            for(int j = 0; j < 13; j++){
-                if (chars[j] == str[i]){value[j]++; break;}
-            }
-        }
+
         int start = -1;
         for (int i = 0; i < 13; i++){
-            if (value[i] > 1) {return -1;}
-            if (start < 0 && value[i] == 1){start = i;}
+            if (val[i] > 1) {return -1;}
+            if (start < 0 && val[i] == 1){start = i;}
         }
         for (int i = 0; i < 5; i++){
-            if (value[i+start] != 1){return -1;}
+            if (val[i+start] != 1){return -1;}
         }
         return 80 + start;
     }
 
     int three(std::string str, std::vector<int> val, std::vector<int> sts){
-
+        for (int i = 0; i < 13; i++){
+            if (val[i] == 3) {return 60 + i;}
+        }
+        return -1;
     }
 
-    int twoPairs(std::string str, std::vector<int> val, std::vector<int> sts){
-
+    int pairs(std::string str, std::vector<int> val, std::vector<int> sts){
+        int add = -1;
+        int c = 0;
+        for (int i = 0; i < 13; i++){
+            if (val[i] == 2) {c++; add = i;}
+        }
+        if (c == 2) {return 40 + add;}
+        else if (c == 1) {return 20 + add;}
+        else {return -1;}
     }
 
-    int onePair(std::string str, std::vector<int> val, std::vector<int> sts){
-
+    int check(std::string str, std::vector<int> val, std::vector<int> sts){
+        int temp = flushRoyal(str, val, sts);
+        if (temp > 0) {return temp;}
+        temp = straightFlush(str, val, sts);
+        if (temp > 0) {return temp;}
+        temp = fourKind(str, val, sts);
+        if (temp > 0) {return temp;}
+        temp = fullHouse(str, val, sts);
+        if (temp > 0) {return temp;}
+        temp = flush(str, val, sts);
+        if (temp > 0) {return temp;}
+        temp = straight(str, val, sts);
+        if (temp > 0) {return temp;}
+        temp = three(str, val, sts);
+        if (temp > 0) {return temp;}
+        temp = pairs(str, val, sts);
+        if (temp > 0) {return temp;}
+        for (int i = 12; i >= 0; i--){
+            if (val[i] > 0) {return i;}
+        }
+        return 0;
     }
 }
 
 int problem54() {
+    int res = 0;
     std::fstream fs;
-    fs.open("../files/problem52.txt", std::fstream::in);
-    if (!fs.is_open()){
+    fs.open("../files/problem54.txt", std::fstream::in);
+    if (!fs.is_open()) {
         return -1;
     }
     std::string msg;
-    while (!fs.eof()){
-        fs >> msg;
+
+while (std::getline(fs, msg)){
+    //std::cout << msg << std::endl;
         std::string str1 = pr54::p1(msg);
         std::string str2 = pr54::p2(msg);
         std::vector<int> values1 = pr54::getValues(str1);
         std::vector<int> values2 = pr54::getValues(str2);
         std::vector<int> suits1 = pr54::getSuits(str1);
         std::vector<int> suits2 = pr54::getSuits(str2);
-
+        if (pr54::check(str1, values1, suits1) > pr54::check(str2, values2, suits2)) {
+            res++;
+        }
         msg = "";
-    }
-
-
-//    std::string msg = "8C TS KC 9H 4S 7D 2S 5D 3S AC";
-//        std::string str1 = pr54::p1(msg);
-//        std::string str2 = pr54::p2(msg);
-//        std::vector<int> values1 = pr54::getValues(str1);
-//        std::vector<int> values2 = pr54::getValues(str2);
-//        std::vector<int> suits1 = pr54::getSuits(str1);
-//        std::vector<int> suits2 = pr54::getSuits(str2);
-//
-//        std::cout << msg << std::endl;
-//
-//        for (int i = 0; i < 4; i++){
-//            std::cout << suits1[i] << ' ';
-//        }
-//        std::cout << std::endl;
-//        for (int i = 0; i < 4; i++){
-//            std::cout << suits2[i] << ' ';
-//        }
-//        std::cout << std::endl;
-//        for (int i = 0; i < 13; i++){
-//            std::cout << values1[i] << ' ';
-//        }
-//    std::cout << std::endl;
-//    for (int i = 0; i < 13; i++){
-//        std::cout << values2[i] << ' ';
-//    }
-//    return -1;
+}
+    return res;
 }
