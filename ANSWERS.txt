@@ -56,7 +56,7 @@ Problem 051: 121313
 Problem 052: 142857
 Problem 053: 4075
 Problem 054: 376
-Problem 055:
+Problem 055: 249
 Problem 056:
 Problem 057:
 Problem 058:
