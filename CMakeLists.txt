@@ -64,4 +64,5 @@ add_executable(Project_Euler main.cpp
         problems2/problem53.cpp
         problems2/problem54.cpp
         problems2/problem55.cpp
+        problems2/problem56.cpp
 )
