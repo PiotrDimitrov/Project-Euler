@@ -60,5 +60,6 @@ int problem54();
 int problem55();
 int problem56();
 int problem57();
+int problem58();
 
 #endif //PROJECT_EULER_HEADER_H
