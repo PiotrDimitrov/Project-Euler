@@ -1,4 +1,4 @@
-Project Euler problems answers
+Project Euler Problems Answers
 https://github.com/PiotrDimitrov/Project-Euler.git
 
 
